@@ -1,0 +1,40 @@
+Nama : Nirvana Indiranjani
+Kelas : 5B
+Nim : 19090046
+
+Implementasi dan tranformasikan datanya ke dalam data warehouse menggunakan perangkat ETL
+
+---------------------------------------------------------------------------------------
+1. Pertama desain database dengan user
+
+2. membuat inialisasi table database untuk databasenya  menggunakan FULL MYSQL
+
+3. import database sumber ke dalam mysql dengan nama warehouse maka akan masuk otomatis ke dalam sebuah database    classicmodels
+
+setelah database berhasil diimport buat sebuah tabel yang telah didesain sebelumnya
+disini saya membuat sebuah 3 tabel dimensi yaitu :
+1. Tabel dimensi Customer
+2. Tabel dimensi Karyawan
+3. Tabel dimensi Kantor
+
+4. menerapkan sebuah proses ETL di dalam Tools PENTAHO DATA INTEGRATION
+
+5. untuk desain tabel dimensi pertama bernama dimensi customer desainya dengan menggunakan :
+
+Tabel Input 	: digunakan untuk mengambil sebuah data atau nilai di dalam database 
+		  classicmodels, ambil beberapa value yang di butuhkan
+Add Sequence	: Proses Penambahan sebuah data berdasarkan ID yang nantinya akan 
+		  di teruskan ke dalam data warehouse
+Insert/update	: Proses Penambahan data yang tadinya di dalam sumber data asli
+		  kemudian diolah dan ditampung kedalam data warehouse
+
+6. untuk proses pembuatan tabel dimensi lainya sama hanya beda saat membuat tabel dimensi waktu 
+   karena pada proses membuat tabel dimensi waktu perlu menambahkan beberapa komponen seperti 
+- Generate rows
+- Add sequence
+- Calculator
+- Data grid 
+- Stream lookup
+- Modified javascript
+- Insert/Update
+
